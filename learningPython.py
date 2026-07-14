@@ -1,24 +1,23 @@
 # This is my first Python program
-import math
 
 # Strings
-first_name = "Bryce"
-fav_food = "pizza"
-email = "bryce.rich82@gmail.com"
+# first_name = "Bryce"
+# fav_food = "pizza"
+# email = "bryce.rich82@gmail.com"
 
 # Integers
-age = 19
-quantity = 5
-num_of_students = 30
+# age = 19
+# quantity = 5
+# num_of_students = 30
 
 # Floats
-price = 9.99
-gpa = 2.73
-distance = 5.5
+# price = 9.99
+# gpa = 2.73
+# distance = 5.5
 
 # Booleans
-is_student = True
-is_wealthy = False
+# is_student = True
+# is_wealthy = False
 
 
 # Type Casting = The conversion of one data type to another
@@ -68,19 +67,19 @@ is_wealthy = False
 
 
 # Arithmetic & Math
-friends = 5
-friends += 1  # adding to a variable
-friends -= 2  # subtracting from a variable
-friends *= 3  # multiplying a variable
-friends /= 4  # dividing a variable (use // for int and not floats)
-friends **= 2  # exponentiating a variable
-remainder = friends % 2
+# friends = 5
+# friends += 1  # adding to a variable
+# friends -= 2  # subtracting from a variable
+# friends *= 3  # multiplying a variable
+# friends /= 4  # dividing a variable (use // for int and not floats)
+# friends **= 2  # exponentiating a variable
+# remainder = friends % 2
 # print(friends)
 # print(remainder)
 
-x = 3.14
-y = 4
-z = 5
+# x = 3.14
+# y = 4
+# z = 5
 # result = round(x)
 # result = abs(y)
 # result = pow(y, 2)
@@ -88,7 +87,7 @@ z = 5
 # result = min(x, y, z)
 # print(result)
 
-num = 7.8
+# num = 7.8
 # print(math.pi)
 # print(math.e)
 # result = math.sqrt(num)
@@ -107,7 +106,66 @@ num = 7.8
 # print(f"The area of the circle is {round(area, 2)}cm²")
 
 # Math Exercise 3 = Calculate the hypotenuse of a triangle
-a = float(input("What is the base of the triangle in meters?: "))
-b = float(input("What is the height of the triangle in meters?: "))
-c = math.sqrt(pow(a, 2) + pow(b, 2))
-print(f"The length of the hypotenuse is {round(c, 2)}m")
+# a = float(input("What is the base of the triangle in meters?: "))
+# b = float(input("What is the height of the triangle in meters?: "))
+# c = math.sqrt(pow(a, 2) + pow(b, 2))
+# print(f"The length of the hypotenuse is {round(c, 2)}m")
+
+
+# if statement = Do some code only IF some condition is True
+#       Else do somthing else
+# age = int(input("Enter your age: "))
+
+# if age > 99:
+#     print("You are too old to sign up.")
+# elif age >= 18:
+#     print("You are now signed up!")
+# elif age < 0:
+#     print("You haven't been born yet...")
+# else:
+#     print("You must be 18+ to sign up.")
+
+# response = input("Would you like food> (Y/N): ")
+# if response == "Y":
+#     print("Have some food!")
+# else:
+#     print("No food for you!")
+
+# name = input("Enter your name: ")
+# if name == "":
+#     print("You did not type in your name!")
+# else:
+#     print(f"Hello, {name}!")
+
+# for_sale = True
+# if for_sale:
+#     print("This item is for sale!")
+# else:
+#     print("This item is not for sale.")
+
+# online = False
+# if online:
+#     print("The user is online.")
+# else:
+#     print("The user is offline.")
+
+
+# Python Calculator
+operator = input("Enter and operator (+ - * /): ")
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+if operator == "+":
+    result = num1 + num2
+    print(result)
+elif operator == "-":
+    result = num1 - num2
+    print(result)
+elif operator == "*":
+    result = num1 * num2
+    print(result)
+elif operator == "/":
+    result = num1 / num2
+    print(result)
+else:
+    print(f"{operator} is not a valid operator.")
