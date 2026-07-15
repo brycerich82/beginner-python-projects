@@ -367,10 +367,214 @@
 
 # print("bye")
 
-num = float(input("Enter a number between 1 - 10: "))
+# num = float(input("Enter a number between 1 - 10: "))
 
-while num < 1 or num > 10:
-    print(f"{num} is not a valid number.")
-    num = float(input("Enter a number between 1 - 10: "))
+# while num < 1 or num > 10:
+#     print(f"{num} is not a valid number.")
+#     num = float(input("Enter a number between 1 - 10: "))
 
-print(f"Your number is {num}!")
+# print(f"Your number is {num}!")
+
+
+# Compound Interest Calculator
+
+# principle = 0
+# rate = 0
+# time = 0
+# contribution = 0
+
+# while True:
+#     principle = float(input("Enter the principle value in $: "))
+#     if principle < 0:
+#         print("Principle can't be negative.")
+#     else:
+#         break
+
+# while True:
+#     contribution = float(
+#         input("Enter annual contribution in $ (assume beginning-of-year payments): ")
+#     )
+#     if contribution < 0:
+#         print("Contribution can't be negative.")
+#     else:
+#         break
+
+# while True:
+#     rate = float(input("Enter the expected rate of return in %: "))
+#     if rate < 0:
+#         print("rate can't be negative.")
+#     else:
+#         break
+
+# while True:
+#     time = int(input("Enter the time in years: "))
+#     if time <= 0:
+#         print("time can't be less than or equal to zero.")
+#     else:
+#         break
+
+# if rate == 0:
+#     total = principle + contribution * time
+# else:
+#     total = principle * pow((1 + rate / 100), time) + contribution * (
+#         (pow(1 + rate / 100, time) - 1) / (rate / 100)
+#     ) * (1 + rate / 100)
+
+# print(f"\nBalance after {time} year(s) would be: ${total:.2f}")
+
+
+# For Loop = execute a block of code a fixed number of times.
+#            You can iterate over a range, string, sequence, etc.
+
+# for x in range(1, 11):
+#     print(x)
+
+# for y in reversed(range(1, 11)):
+#     print(y)
+
+# print("\nHappy New Year!!!")
+
+# credit_card = "1224-5342-5244-6424"
+# for x in credit_card:
+#     print(x)
+
+# for x in range(1, 21):
+#     if x == 13:
+#         continue
+#     else:
+#         print(x)
+
+# for x in range(1, 21):
+#     if x == 13:
+#         break
+#     else:
+#         print(x)
+
+
+# import time
+
+# my_time = int(input("Enter the time in seconds: "))
+
+# SECONDS_IN_YEAR = 31536000
+# SECONDS_IN_WEEK = 604800
+# SECONDS_IN_DAY = 86400
+# SECONDS_IN_HOUR = 3600
+# SECONDS_IN_MINUTE = 60
+
+# for x in range(my_time, 0, -1):
+#     years = int(x / SECONDS_IN_YEAR)
+#     remaining = x % SECONDS_IN_YEAR
+#     weeks = int(remaining / SECONDS_IN_WEEK)
+#     remaining = remaining % SECONDS_IN_WEEK
+#     days = int(remaining / SECONDS_IN_DAY)
+#     remaining = remaining % SECONDS_IN_DAY
+#     hours = int(remaining / SECONDS_IN_HOUR)
+#     remaining = remaining % SECONDS_IN_HOUR
+#     minutes = int(remaining / SECONDS_IN_MINUTE)
+#     seconds = remaining % SECONDS_IN_MINUTE
+#     print(f"{years:02}:{weeks:02}:{days:02}:{hours:02}:{minutes:02}:{seconds:02}")
+#     time.sleep(1)
+
+# print("TIME'S UP!")
+
+
+# Nested Loop = A loop within another loop (outer, inner)
+#               outer loop:
+#                   inner loop:
+
+# rows = int(input("Enter the number of rows: "))
+# cols = int(input("Enter the number of columns: "))
+# symbol = input("Enter a symbol to use: ")
+
+# for x in range(rows):
+#     for y in range(cols):
+#         print(
+#             symbol, end=""
+#         )  # in print() you can set end = "" instead of the natural "\n"
+#     print()  # this just prints new line
+
+
+# collection = single "variable" used to store multiple valuse
+#   List = [] ordered and changeable. Duplicates OK
+#   Set = {} unordered and immutable, but Add/Remove OK. NO duplicates
+#   Tuple = () ordered and unchangeable. Duplicates OK. FASTER
+
+# fruits = ["apple", "orange", "banana", "coconut"]
+# print(dir(fruits))  # all the things you can do with this list
+# print(help(fruits))  # description of attributes and methods
+# print(len(fruits))  # how long collection is
+# print("apple" in fruits)  # returns True or False
+
+# fruits[1] = "pineapple"  # returns what is in the index, 0 is first index
+# fruits.append("grape")  # adds "grape" to end of list
+# fruits.remove("apple")  # removes item from list
+# fruits.insert("tomato, 2")  # inserts in spot and move everything else down
+# fruits.sort()  # puts in alphabetical/numerical order
+# fruits.reverse()  # reverse order currently in
+# print(fruits.index("apple"))  # gives index of item
+# fruits.count("banana")  # tells how many items in list
+
+# print(fruits[:4])
+
+# for fruit in fruits:
+#     print(fruit)
+
+# fruits = {"apple", "orange", "banana", "coconut"}
+# # print(dir(fruits))  # all the things you can do with this set
+# # print(help(fruits))  # description of attributes and methods
+# # print(len(fruits))  # how long set is
+# # print("apple" in fruits)  # returns True or False
+# # cannot index
+
+# fruits.add("strawberry")
+# fruits.remove("apple")
+# fruits.pop()  # removes random item (if ran multiple times will randomly remove but keep memory of total set)
+# fruits.clear()  # poof
+
+# print(fruits)
+
+# for fruit in fruits:
+#     print(fruit)
+
+# fruits = ("apple", "orange", "banana", "coconut")
+# print(dir(fruits))  # all the things you can do with this tuple
+# print(help(fruits))  # description of attributes and methods
+# print(len(fruits))  # how long tuple is
+# print("apple" in fruits)  # returns True or False
+
+# print(fruits.index("apple"))
+# print(fruits.count("coconut"))
+
+# print(fruits)
+
+# for fruit in fruits:
+#     print(fruit)
+
+
+# Shopping Cart Program
+
+items = []
+prices = []
+total = 0
+
+while True:
+    item = input("Enter an item to buy (q to quit): ")
+    if item.lower() == "q":
+        break
+    else:
+        price = float(input(f"Enter the price of {item}: $"))
+        items.append(item)
+        prices.append(price)
+
+print()
+print("----- YOUR CART -----")
+print()
+
+for item in items:
+    print(item)
+
+for price in prices:
+    total += price
+
+print()
+print(f"Your total is: ${total:.2f}")
