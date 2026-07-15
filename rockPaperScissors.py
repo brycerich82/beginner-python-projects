@@ -9,6 +9,8 @@ print()
 print("Welcome to Rock, Paper, Scissors!")
 print()
 username = input("What is your name?: ").title()
+print(f"Nice to meet you, {username.title()}!")
+print()
 running = True
 wins_in_row = 0
 loses_in_row = 0
