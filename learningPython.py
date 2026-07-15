@@ -553,28 +553,378 @@
 
 # Shopping Cart Program
 
-items = []
-prices = []
+# items = []
+# prices = []
+# total = 0
+
+# while True:
+#     item = input("Enter an item to buy (q to quit): ")
+#     if item.lower() == "q":
+#         break
+#     else:
+#         price = float(input(f"Enter the price of {item}: $"))
+#         items.append(item)
+#         prices.append(price)
+
+# print()
+# print("----- YOUR CART -----")
+# print()
+
+# for item in items:
+#     print(item)
+
+# for price in prices:
+#     total += price
+
+# print()
+# print(f"Your total is: ${total:.2f}")
+
+
+# 2D collection
+
+# fruits = ["apple", "orange", "banana", "coconut"]
+# vegetables = ["celery", "carrots", "potatoes"]
+# meats = ["chicken", "fish", "turkey"]
+
+# groceries = [fruits, vegetables, meats]
+
+# print(groceries[0][0])  # prints "apple" (row,cols)
+
+# for collection in groceries:
+#     for food in collection:
+#         print(food, end=" ")
+#     print()
+
+# numpad = ((1, 2, 3), (4, 5, 6), (7, 8, 9), ("*", 0, "#"))
+
+# for row in numpad:
+#     for num in row:
+#         print(num, end=" ")
+#     print()
+
+
+# # Python Quiz Game
+
+# questions = (
+#     "How many elements are in the periodic table?: ",
+#     "Which animal lays the largest eggs?: ",
+#     "What is the most abundant gas in Earth's atmosphere?: ",
+#     "How many bones are in the human body?: ",
+#     "Which planet in the solar system is the hottest?: ",
+# )
+
+# options = (
+#     ("A. 116", "B. 117", "C. 118", "D. 119"),
+#     ("A. Whale", "B. Crocodile", "C. Elephant", "D. Ostrich"),
+#     ("A. Nitrogen", "B. Oxygen", "C. Carbon-Dioxide", "D. Hydrogen"),
+#     ("A. 206", "B. 207", "C. 208", "D. 209"),
+#     ("A. Mercury", "B. Venus", "C. Earth", "D. Mars"),
+# )
+
+# answers = ("C", "D", "A", "A", "B")
+# guesses = []
+# score = 0
+# question_num = 0
+
+# for question in questions:
+#     print("--------------------")
+#     print(question)
+#     for option in options[question_num]:
+#         print(option)
+#     guess = input("Enter (A, B, C, D): ").upper()
+#     guesses.append(guess)
+#     if guess == answers[question_num]:
+#         score += 1
+#         print()
+#         print("CORRECT!")
+#     else:
+#         print()
+#         print("INCORRECT!")
+#         print(f"{answers[question_num]} is the correct answer.")
+#     question_num += 1
+
+# print()
+# print()
+# print()
+# print("---------------------")
+# print("       RESULTS       ")
+# print("---------------------")
+
+# print("answers: ", end="")
+# for answer in answers:
+#     print(answer, end=" ")
+# print()
+
+# print("guesses: ", end="")
+# for guess in guesses:
+#     print(guess, end=" ")
+# print()
+
+# print()
+
+# score = float(score / len(questions) * 100)
+# if 0 <= score < 70:
+#     print(f"Your grade is {score:.2f}%\nYou got an F!😡")
+# elif 70 <= score < 75:
+#     print(f"Your grade is {score:.2f}%\nYou got a D!☹️")
+# elif 75 <= score < 80:
+#     print(f"Your grade is {score:.2f}%\nYou got a C!😐")
+# elif 80 <= score < 90:
+#     print(f"Your grade is {score:.2f}%\nYou got a B!🙂")
+# elif 90 <= score <= 100:
+#     print(f"Your grade is {score:.2f}%\nYou got an A!🤩")
+
+
+# dictionary = a collection of {key:value} pairs
+#              ordered and changeable. No duplicates
+
+capitals = {
+    "USA": "Washington D.C.",
+    "India": "New Dehli",
+    "China": "Bejing",
+    "Russia": "Moscow",
+}
+
+# print(dir(capitals)) # attributes and methods
+# print(help(capitals)) # descriptions of dir()
+
+# print(capitals.get("USA"))
+
+# if capitals.get("Japan"):
+#     print("That capital exists.")
+# else:
+#     print("That capital doesn't exist.")
+
+# capitals.update({"Germany": "Berlin"})
+# capitals.update({"USA": "Atlanta"})
+# capitals.pop("China")
+# capitals.popitem()  # removes most recent addition to dictionary
+# capitals.clear()  # clears dictionary
+
+# keys = capitals.keys()
+# for key in capitals.keys():
+#     print(key)
+
+# values = capitals.values()
+# for value in capitals.values():
+#     print(value)
+
+# items = capitals.items()
+# for key, value in capitals.items():
+#     print(f"{key}: {value}")
+
+
+# # Consession Stand Program
+
+# menu = {
+#     "pizza": 3.00,
+#     "nachos": 4.50,
+#     "popcorn": 6.00,
+#     "fries": 2.50,
+#     "chips": 1.00,
+#     "pretzel": 3.50,
+#     "soda": 3.00,
+#     "lemonade": 4.25,
+# }
+
+# cart = []
+# total = 0
+
+# print("--------- MENU ---------")
+# for key, value in menu.items():
+#     print(f"{key:10}: ${value:.2f}")
+# print("------------------------")
+
+# while True:
+#     food = input("Select an item (q to quit): ").lower()
+#     if food == "q":
+#         break
+#     elif menu.get(food) is not None:
+#         cart.append(food)
+
+# print()
+# print("------- YOUR ORDER -------")
+# for food in cart:
+#     total += menu.get(food)
+#     print(food, end=" | ")
+
+
+# print()
+# print()
+# print(f"Your total is: ${total:.2f}")
+
+
+# # Random Numbers
+
+# import random
+
+# # print(help(random)) # for guidlines
+
+# low = 1
+# high = 100
+# options = ("rock", "paper", "scissors")
+# cards = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
+
+# # number = random.randint(low, high)
+# # float = random.random()
+# # option = random.choice(options)
+# random.shuffle(cards)
+
+# print(cards)
+
+
+# # Number Guessing Game
+
+# import random
+
+# low = 1
+# high = 100
+# answer = random.randint(low, high)
+# guesses = 0
+# is_running = True
+
+# print()
+# print("Python Number Guessing game!")
+# print()
+# print(f"Select a number between {low} and {high}")
+
+# while is_running:
+#     guess = input("Enter your guess: ")
+#     if guess.isdigit():
+#         guess = int(guess)
+#         guesses += 1
+
+#         if guess < low or guess > high:
+#             print()
+#             print("That number is out of the given range.")
+#             print(f"Please select a number between {low} and {high}")
+#             print()
+#         elif guess < answer:
+#             print()
+#             print("Too low! Try again!")
+#             print()
+#         elif guess > answer:
+#             print()
+#             print("Too high! Try again!")
+#             print()
+#         else:
+#             print()
+#             print(f"CORRECT! The answer was {answer}!")
+#             print(f"You got the answer in {guesses} tries!")
+#             is_running = False
+
+#     else:
+#         print()
+#         print("That is not a valid guess.")
+#         print(f"Please select a number between {low} and {high}")
+#         print()
+
+
+# # Rock Paper Scissors Game
+
+# import random
+
+# options = ("rock", "paper", "scissors")
+
+
+# print()
+# print("Welcome to Rock, Paper, Scissors!")
+# print()
+# username = input("What is your name?: ").title()
+# running = True
+# wins_in_row = 0
+# loses_in_row = 0
+# ties_in_row = 0
+
+# while running:
+#     player = None
+#     computer = random.choice(options)
+
+#     while player not in options:
+#         player = input(f"{username}, enter a choice (rock, paper, scissors): ")
+#         print()
+
+#     print(f"{username.title()}: {player}\nComputer: {computer}.")
+
+#     print()
+#     if player == computer:
+#         print("It's a TIE!")
+#         ties_in_row += 1
+#         wins_in_row = 0
+#         loses_in_row = 0
+#         print(f"{username.title()} and computer have {ties_in_row} tie(s) in a row!")
+#     elif player == "rock" and computer == "scissors":
+#         print("You WIN!")
+#         wins_in_row += 1
+#         ties_in_row = 0
+#         loses_in_row = 0
+#         print(f"{username.title()} has {wins_in_row} win(s) in a row!")
+#     elif player == "paper" and computer == "rock":
+#         print("You WIN!")
+#         loses_in_row = 0
+#         ties_in_row = 0
+#         wins_in_row += 1
+#         print(f"{username.title()} has {wins_in_row} win(s) in a row!")
+#     elif player == "scissors" and computer == "paper":
+#         print("You WIN!")
+#         loses_in_row = 0
+#         ties_in_row = 0
+#         wins_in_row += 1
+#         print(f"{username.title()} has {wins_in_row} win(s) in a row!")
+#     else:
+#         print("You LOSE!")
+#         loses_in_row += 1
+#         wins_in_row = 0
+#         ties_in_row = 0
+#         print(f"You have {loses_in_row} loss/es in a row!")
+
+#     if not input("Play again? (y/n): ").lower() == "y":
+#         running = False
+#     else:
+#         print()
+
+# print()
+# print("Thanks for playing!")
+
+
+# Dice Roller Program
+import random
+
+# unit code chars to make dice
+
+# print("\u25cf \u250c \u2510 \u2510 \u2502 \u2514 \u2518")
+
+# should look like this:
+
+# ● ┌ ┐ ┐ │ └ ┘
+
+dice_art = {
+    1: ("┌─────────┐", "│         │", "│    ●    │", "│         │", "└─────────┘"),
+    2: ("┌─────────┐", "│  ●      │", "│         │", "│      ●  │", "└─────────┘"),
+    3: ("┌─────────┐", "│  ●      │", "│    ●    │", "│      ●  │", "└─────────┘"),
+    4: ("┌─────────┐", "│  ●   ●  │", "│         │", "│  ●   ●  │", "└─────────┘"),
+    5: ("┌─────────┐", "│  ●   ●  │", "│    ●    │", "│  ●   ●  │", "└─────────┘"),
+    6: ("┌─────────┐", "│  ●   ●  │", "│  ●   ●  │", "│  ●   ●  │", "└─────────┘"),
+}
+
+dice = []
 total = 0
-
-while True:
-    item = input("Enter an item to buy (q to quit): ")
-    if item.lower() == "q":
-        break
-    else:
-        price = float(input(f"Enter the price of {item}: $"))
-        items.append(item)
-        prices.append(price)
-
 print()
-print("----- YOUR CART -----")
+num_of_dice = int(input("Enter a number of die: "))
+
+for die in range(num_of_dice):
+    dice.append(random.randint(1, 6))
+
+# for die in range(num_of_dice):
+#     for line in dice_art.get(dice[die]):   #This is for verticle die
+#         print(line)
+
+for line in range(5):
+    for die in dice:
+        print(dice_art.get(die)[line], end="")  # This is for horizontal die
+    print()
+
+for die in dice:
+    total += die
 print()
-
-for item in items:
-    print(item)
-
-for price in prices:
-    total += price
-
-print()
-print(f"Your total is: ${total:.2f}")
+print(f"The total is: {total}!")
