@@ -5,7 +5,7 @@ prices = []
 total = 0
 
 while True:
-    item = input("Enter an item to buy (q to quit): ")
+    item = input("Enter an item to in your cart (q to quit): ")
     if item.lower() == "q":
         break
     else:
