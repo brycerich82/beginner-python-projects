@@ -42,4 +42,4 @@ else:
         (pow(1 + rate / 100, time) - 1) / (rate / 100)
     ) * (1 + rate / 100)
 
-print(f"\nBalance after {time} year(s) would be: ${total:.2f}")
+print(f"\nBalance after {time} year(s) is: ${total:.2f}")
