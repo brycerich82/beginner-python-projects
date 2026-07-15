@@ -38,4 +38,4 @@ for line in range(5):
 for die in dice:
     total += die
 print()
-print(f"The total is: {total}!")
+print(f"Nice! The total is: {total}!")
